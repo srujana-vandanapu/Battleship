@@ -1,0 +1,44 @@
+#gameboards {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  #gameboard {
+    margin: 1rem;
+    position: relative;
+    width: 500px; /* 10 columns * 50px */
+    height: 500px; /* 10 rows * 50px */
+    border: 1px solid black;
+  }
+  
+  #gameboard div {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+    box-sizing: border-box;
+  }
+  
+  #gameboard .hit {
+    background-color: #ED6A5A;
+  }
+  
+  #gameboard .miss {
+    background-color: #F4F1BB;
+  }
+  
+  #gameboard .hidden-ship {
+    background-color: #E6EBE0;
+  }
+  
+  #gameboard.highlight {
+    border-color: rgb(87, 86, 84);
+    box-shadow: 0 0 10px 5px rgb(60, 60, 57);
+  }
+  .instructions {
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #abcec9;
+  }
