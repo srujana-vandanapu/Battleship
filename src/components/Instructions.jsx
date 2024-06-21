@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default function Instructions() {
     const [isOpen, setIsOpen] = useState(false);
@@ -8,7 +8,7 @@ export default function Instructions() {
     setIsOpen(!isOpen);
     console.log(isOpen);
   };
-  return <div className="instructions">
+  return <div className="instructions container">
   <h2 onClick={toggleInstructions} style={{ cursor: 'pointer' }}>
     Click here for Instructions
   </h2>

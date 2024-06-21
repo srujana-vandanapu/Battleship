@@ -2,23 +2,47 @@
     display: flex;
     justify-content: space-around;
   }
-  
   #gameboard {
+    background-color:#E6EBE0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
     margin: 1rem;
     position: relative;
-    width: 500px; /* 10 columns * 50px */
-    height: 500px; /* 10 rows * 50px */
-    border: 1px solid black;
+    width: 500px;
+    height: 500px;
+    
   }
   
   #gameboard div {
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    border: 1px solid black;
-    box-sizing: border-box;
+    margin: 2px;
+    width: 9%;
+    height: 9%;
+    border: 1px solid rgba(0, 0, 0, 0.123);
+  }
+  @media (max-width: 768px) {
+    #gameboard {
+      width: 389px;
+      height: 389px;
+    }
+    #gameboard div {
+      width: 8%;
+      height: 8%;
+    }
+  }
+  @media (max-width: 320px) {
+    #gameboard {
+      width: 160px;
+      height: 160px;
+    }
+    #gameboard div {
+      width: 6.5%;
+      height: 6.5%;
+    }
   }
   
+
   #gameboard .hit {
     background-color: #ED6A5A;
   }
@@ -31,14 +55,15 @@
     background-color: #E6EBE0;
   }
   
-  #gameboard.highlight {
-    border-color: rgb(87, 86, 84);
-    box-shadow: 0 0 10px 5px rgb(60, 60, 57);
+  div.highlight {
+    box-shadow: 0 0 10px 5px rgba(84, 84, 78, 0.292);
   }
   .instructions {
     margin-bottom: 20px;
-    border: 1px solid #ccc;
     border-radius: 5px;
     padding: 10px;
-    background-color: #abcec9;
+    background-color: #90b4af;
+  }
+  .App{
+background-color:#abcec9;
   }

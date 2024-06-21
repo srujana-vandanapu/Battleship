@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./index.css";
 import GameBoard from "./components/GameBoard";
 import Instructions from "./components/Instructions";
-
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const initialGameBoard1 = () => [
   [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
@@ -69,9 +69,7 @@ function App() {
           setGameOver(true);
         }
       } else if (newBoard[row][col] > 1) {
-        alert(
-          "You already fired at this location."
-        );
+        alert("You already fired at this location.");
       }
     } else {
       const newBoard = player1Board.slice();
@@ -88,9 +86,7 @@ function App() {
           setGameOver(true);
         }
       } else if (newBoard[row][col] > 1) {
-        alert(
-          "You already fired at this location."
-        );
+        alert("You already fired at this location.");
       }
     }
     if (!hit) {
@@ -109,9 +105,9 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Battleship - Game</h1>
+      <h1 className="text-center">Battleship - Game</h1>
       <Instructions />
-      <h2>Current Player: Player {currentPlayer}</h2>
+      <h2 className="text-center">Current Player: Player {currentPlayer}</h2>
 
       <div id="gameboards">
         <GameBoard
@@ -125,7 +121,13 @@ function App() {
           highlight={currentPlayer === 1}
         />
       </div>
-      <button onClick={resetGame}>Reset Game</button>
+      <button
+        className="btn text-dark"
+        style={{ backgroundColor: "#E6EBE0" }}
+        onClick={resetGame}
+      >
+        Reset Game
+      </button>
     </div>
   );
 }
